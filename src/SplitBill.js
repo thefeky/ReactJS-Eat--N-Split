@@ -6,8 +6,6 @@ export default function SplitBill({ selected, onSelected, onSplitBill }) {
   const friendExpense = bill - yourExpense;
   const [whoIsPaying, setWhoIsPaying] = useState("1");
 
-  if (selected === null) return;
-
   function splitBill(e) {
     e.preventDefault();
 

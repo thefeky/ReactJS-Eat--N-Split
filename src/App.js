@@ -68,12 +68,15 @@ export default function App() {
           onFormDisplay={handleFormDisplay}
         />
       </div>
-      <SplitBill
-        selected={selected}
-        onSelected={handleSelected}
-        onFormDisplay={handleFormDisplay}
-        onSplitBill={handleSplitBill}
-      />
+      {selected && (
+        <SplitBill
+          selected={selected}
+          onSelected={handleSelected}
+          onFormDisplay={handleFormDisplay}
+          onSplitBill={handleSplitBill}
+          key={selected.id}
+        />
+      )}
     </div>
   );
 }
